@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if "username" in request.session %}
+
+    <form method="POST" enctype="multipart/form-data" >  
+        {% csrf_token %}  
+        <input type="file" name="file" id="">
+        <input type="submit" class="save btn btn-default" value="Submit">
+    </form>
+{% endif %}
+{% endblock %}

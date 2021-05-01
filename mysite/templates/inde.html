@@ -1,0 +1,14 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if "username" in request.session %}
+<body>
+    <a href="{% url 'uploadFile' %}"><button class="btn btn-primary">Upload File</button></a>
+    <br>
+    <br>
+    <br>
+    <a href=""><button class="btn btn-primary">View All Files</button></a>
+</body>
+</html>
+{% endif %}
+{% endblock %}

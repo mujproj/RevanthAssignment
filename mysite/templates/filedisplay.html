@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block content %}
+{% if "username" in request.session %}
+
+<table>
+    <tr>
+        File Name
+    </tr>
+    {% for file in files %}
+        <td><a href="{{file.jsonFile.url}}" download>{{file.jsonFile}}</a></td>
+    {% endfor %}
+</table>
+
+{% endif %}
+{% endblock %}
